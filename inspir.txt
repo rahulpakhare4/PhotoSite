@@ -1,6 +1,0 @@
-Which statement describes the INSPIRE category set?
-
-It is used to organize geographic information in alignment with the European Union's spatial data infrastructure and environmental policies.
-It is used to provide a method for describing and cataloging geographic information in alignment with international standards.
-It is used by an administrator who wants to create custom categories for organizing their organization's unique content.
-It is used to support ArcGIS Living Atlas of the World and can be customized to support your organization's needs.

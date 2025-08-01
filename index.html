@@ -1,71 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Image Gallery with Fancybox</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Myra & Tejal Memories</title>
+  <link rel="stylesheet" href="styles.css" />
+   <link rel="stylesheet" href="mag.css" />
 
-    <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- Bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-    <!-- Fancybox CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
-
-    <!-- Fancybox JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
+  </head>
 <body>
+  <div class="container">
+    <h1>Myra & Tejal's Memories</h1>
 
-<div class="container page-top">
-    <div class="row">
-
-        <!-- Repeat this block for each image -->
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-            <a href="images\sports Tejal Pakhare 2022.jpg" class="fancybox" rel="ligthbox">
-                <img src="images\sports Tejal Pakhare 2022.jpg" class="zoom img-fluid" alt="">
-            </a>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-            <a href="images\IMG_20241113_192137.jpg" class="fancybox" rel="ligthbox">
-                <img src="images\IMG_20241113_192137.jpg" class="zoom img-fluid" alt="">
-            </a>
-        </div>
-
-                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-            <a href="D:\RAHUL PAKARE BARSE FINAL\DSC_0642.jpg" class="fancybox" rel="ligthbox">
-                <img src="D:\RAHUL PAKARE BARSE FINAL\DSC_0642.jpg" class="zoom img-fluid" alt="">
-            </a>
-        </div>
-
-                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-            <a href="https://images.pexels.com/photos/38238/maldives-ile-beach-sun-38238.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
-                <img src="https://images.pexels.com/photos/38238/maldives-ile-beach-sun-38238.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid" alt="">
-            </a>
-        </div>
-
-                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-            <a href="https://images.pexels.com/photos/38238/maldives-ile-beach-sun-38238.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
-                <img src="https://images.pexels.com/photos/38238/maldives-ile-beach-sun-38238.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="zoom img-fluid" alt="">
-            </a>
-        </div>
-
-        <!-- Add more image blocks similarly -->
-        <!-- ... (rest of your image blocks) -->
-
+    <div class="buttons">
+      <button class="photo-btn" onclick="showSection('photos')">📸 Photos</button>
+      <button class="video-btn" onclick="showSection('videos')">🎥 Videos</button>
     </div>
-</div>
 
-<!-- Custom Script -->
-<script src="script.js"></script>
+    <!-- Photos Section -->
+    <div id="photos" class="gallery-section" style="display: flex; flex-direction: column; gap: 20px;">
+      <h2>Myra's Photos</h2>
+      <div class="gallery">
+        <img src="images/myra.jpeg" alt="Myra 1" onclick="openModal(0)">
+        <img src="images/myra2.jpeg" alt="Myra 2" onclick="openModal(1)">
+        <img src="images/myra3.jpeg" alt="Myra 3" onclick="openModal(2)">
+      </div>
 
+      <h2>Tejal's Photos</h2>
+      <div class="gallery">
+        <img src="images/tejal1.jpg" alt="Tejal 1" onclick="openModal(3)">
+        <img src="images/tejal2.jpg" alt="Tejal 2" onclick="openModal(4)">
+        <img src="images/tejal3.jpg" alt="Tejal 3" onclick="openModal(5)">
+        <img src="images/tejal4.jpeg" alt="Tejal 4" onclick="openModal(6)">
+        <img src="images/tejal5.jpeg" alt="Tejal 5" onclick="openModal(7)">
+        <img src="images/tejal6.jpg" alt="Tejal 6" onclick="openModal(8)">
+        <img src="images/tejal7.jpeg" alt="Tejal 7" onclick="openModal(9)">
+        <img src="images/tejal8.jpg" alt="Tejal 8" onclick="openModal(10)">
+        <img src="images/tejal9.jpeg" alt="Tejal 9" onclick="openModal(11)">
+      </div>
+    </div>
+
+    <!-- Videos Section -->
+    <div id="videos" class="gallery" style="display: none;">
+      <div class="video-wrapper">
+        <video controls>
+          <source src="videos/Public_speak_1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="video-wrapper">
+        <video controls>
+          <source src="videos/Public_speak_2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="video-wrapper">
+        <video controls>
+          <source src="videos/Tejal_school_gathering.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="video-wrapper">
+        <video controls>
+          <source src="videos/Tejal_school_project.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <button class="modal-prev" onclick="prevImage()">&#10094;</button>
+      <img id="modalImage" src="">
+      <button class="modal-next" onclick="nextImage()">&#10095;</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
