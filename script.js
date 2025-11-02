@@ -1,7 +1,12 @@
 const imageSources = [
-  "images/myra.jpeg",
+  "images/myra1.jpeg",
   "images/myra2.jpeg",
-  "images/myra3.jpeg",
+  "images/myra3.jpg",
+  "images/myra4.JPG",
+  "images/myra5.jpg",
+  "images/myra6.JPG",
+  "images/myra7.jpg",
+  "images/myra8.jpg",
   "images/tejal1.jpg",
   "images/tejal2.jpg",
   "images/tejal3.jpg",
@@ -9,8 +14,7 @@ const imageSources = [
   "images/tejal5.jpeg",
   "images/tejal6.jpg",
   "images/tejal7.jpeg",
-  "images/tejal8.jpg",
-  "images/tejal9.jpeg"
+  "images/tejal8.jpg"
 ];
 
 let currentIndex = 0;
